@@ -10,7 +10,7 @@ import java.util.List;
 @Repository
 public interface ProgramaRepository extends JpaRepository<Programa, Integer> {
     @Query(
-            value = "select * from courses where id IN (:id)",
+            value = "select rider_id from aparicion where show_id = :id",
             nativeQuery = true
     )
     List<Integer> findProgramariders(Integer id);
